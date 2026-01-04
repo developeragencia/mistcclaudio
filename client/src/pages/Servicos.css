@@ -1,0 +1,13 @@
+.servicos-page {
+  padding: 80px 20px;
+  background: var(--cor-cinza-claro);
+}
+
+.servico-content {
+  background: white;
+  padding: 60px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+

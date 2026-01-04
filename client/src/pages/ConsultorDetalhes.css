@@ -1,0 +1,213 @@
+.consultor-detalhes-page {
+  min-height: 100vh;
+  background: var(--cor-cinza-claro);
+}
+
+.consultor-hero {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 60px 20px;
+  margin-bottom: 60px;
+}
+
+.consultor-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.consultor-avatar-large {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 6px solid white;
+  overflow: hidden;
+  background: white;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.consultor-avatar-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-badge-large {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+.status-badge-large.online {
+  background: #10b981;
+}
+
+.consultor-header-info {
+  color: white;
+}
+
+.consultor-header-info h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.consultor-status {
+  font-size: 18px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.consultor-especialidade {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.consultor-categoria {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.consultor-rating-large {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.consultor-rating-large .stars {
+  color: #fbbf24;
+  font-size: 24px;
+}
+
+.consultor-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  padding-bottom: 80px;
+}
+
+.consultor-info-section {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.consultor-info-section h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: var(--cor-roxo-mistico);
+}
+
+.consultor-info-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--cor-cinza-escuro);
+  margin-bottom: 24px;
+}
+
+.info-item {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: var(--cor-cinza-claro);
+  border-radius: 8px;
+}
+
+.info-item strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--cor-azul-escuro);
+}
+
+.info-item ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-item ul li {
+  padding: 4px 0;
+  color: var(--cor-cinza);
+}
+
+.agendamento-card {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 100px;
+}
+
+.agendamento-card h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.agendamento-card p {
+  color: var(--cor-cinza);
+  margin-bottom: 24px;
+}
+
+.duracao-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.duracao-btn {
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.duracao-btn:hover {
+  border-color: var(--cor-roxo-mistico);
+  background: rgba(124, 58, 237, 0.05);
+}
+
+.valor-total {
+  padding: 16px;
+  background: var(--cor-cinza-claro);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 20px;
+  color: var(--cor-roxo-mistico);
+}
+
+.agendamento-card .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 968px) {
+  .consultor-content {
+    grid-template-columns: 1fr;
+  }
+
+  .agendamento-card {
+    position: relative;
+    top: 0;
+  }
+
+  .consultor-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

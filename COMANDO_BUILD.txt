@@ -1,0 +1,21 @@
+COMANDOS PARA EXECUTAR O BUILD:
+
+1. Abra PowerShell, CMD ou Git Bash
+
+2. Execute:
+   cd "D:\CONSELHOS ESOTERICO10"
+
+3. Execute:
+   npm run build
+
+OU se o npm estiver em local específico:
+
+"C:\Program Files\nodejs\npm.cmd" run build
+
+OU se usar nvm:
+
+nvm use
+npm run build
+
+O build criará a pasta client/dist/ com os arquivos prontos para produção.
+

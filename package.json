@@ -1,0 +1,21 @@
+{
+  "name": "conselhos-esotericos",
+  "version": "1.0.0",
+  "description": "Plataforma de consultas esotéricas online",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && nodemon index.js",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "start": "node server/index.js",
+    "start:prod": "cd server && npm start"
+  },
+  "keywords": ["esoteric", "consultations", "platform"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
