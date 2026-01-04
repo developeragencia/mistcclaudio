@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores da logo */
+  --cor-azul-escuro: #1a2744;
+  --cor-azul-claro: #4a90e2;
+  --cor-roxo: #6b46c1;
+  --cor-roxo-claro: #8b5cf6;
+  --cor-rosa: #ec4899;
+  --cor-dourado: #d4af37;
+  --cor-marrom: #8b6914;
+  --cor-roxo-mistico: #7c3aed;
+  --cor-branco: #ffffff;
+  --cor-cinza-claro: #f9fafb;
+  --cor-cinza: #6b7280;
+  --cor-cinza-escuro: #374151;
+  
+  /* Fontes */
+  --fonte-titulo: 'Marcellus', serif;
+  --fonte-texto: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  background-color: var(--cor-branco);
+  color: var(--cor-cinza-escuro);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Efeitos místicos de fundo */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(107, 70, 193, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(124, 58, 237, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-azul-escuro);
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+button {
+  font-family: var(--fonte-texto);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+input, textarea, select {
+  font-family: var(--fonte-texto);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cor-cinza-claro);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cor-roxo-mistico);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cor-roxo);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+
+/* Utilitários */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--cor-roxo-mistico), var(--cor-rosa));
+  color: white;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--cor-roxo-mistico);
+  border: 2px solid var(--cor-roxo-mistico);
+}
+
+.btn-secondary:hover {
+  background: var(--cor-roxo-mistico);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--cor-azul-escuro);
+  border: 2px solid var(--cor-azul-escuro);
+}
+
+.btn-outline:hover {
+  background: var(--cor-azul-escuro);
+  color: white;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 15px rgba(124, 58, 237, 0.15);
+  transform: translateY(-4px);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-info {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-purple {
+  background: #e9d5ff;
+  color: #6b21a8;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+

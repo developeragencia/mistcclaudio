@@ -1,0 +1,393 @@
+.home {
+  min-height: 100vh;
+}
+
+/* Banner Section */
+.banner-section {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.banner-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-slide,
+.banner-default {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.banner-slide.active,
+.banner-default {
+  opacity: 1;
+  position: relative;
+}
+
+.banner-default {
+  background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.8), rgba(236, 72, 153, 0.8));
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 40px;
+}
+
+.banner-content h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-content p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.banner-actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.banner-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.banner-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.banner-indicators button.active {
+  background: white;
+}
+
+/* Section */
+.section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  font-size: 18px;
+  color: var(--cor-cinza);
+}
+
+/* Consultores em Destaque */
+.consultores-destaque {
+  background: var(--cor-cinza-claro);
+}
+
+.consultores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.consultor-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.consultor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.2);
+}
+
+.consultor-cover {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.consultor-avatar {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
+  overflow: hidden;
+  background: white;
+}
+
+.consultor-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-badge {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.status-badge.online {
+  background: #10b981;
+}
+
+.consultor-info {
+  padding: 70px 24px 24px;
+  text-align: center;
+}
+
+.consultor-info h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.consultor-especialidade {
+  color: var(--cor-roxo-mistico);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.consultor-categoria {
+  color: var(--cor-cinza);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.consultor-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.consultor-rating .stars {
+  color: #fbbf24;
+}
+
+.consultor-price {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cor-roxo-mistico);
+  margin-bottom: 20px;
+}
+
+/* Serviços */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.servico-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.servico-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.2);
+}
+
+.servico-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 36px;
+  color: white;
+}
+
+.servico-icon.consultas {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+.servico-icon.pacotes {
+  background: linear-gradient(135deg, #ec4899, #f472b6);
+}
+
+.servico-icon.creditos {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+
+.servico-icon.planos {
+  background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.servico-card h3 {
+  margin-bottom: 12px;
+}
+
+/* Como Funciona */
+.como-funciona {
+  background: var(--cor-cinza-claro);
+}
+
+.passos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.passo-card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+}
+
+.passo-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cor-roxo-mistico), var(--cor-rosa));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 auto 24px;
+}
+
+.passo-card h3 {
+  margin-bottom: 12px;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--cor-roxo-mistico), var(--cor-rosa));
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.cta-content p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--cor-cinza);
+  font-size: 18px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .banner-section {
+    height: 500px;
+  }
+
+  .banner-content h1 {
+    font-size: 36px;
+  }
+
+  .banner-content p {
+    font-size: 18px;
+  }
+
+  .consultores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .passos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-content h2 {
+    font-size: 32px;
+  }
+}
+
